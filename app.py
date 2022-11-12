@@ -116,10 +116,7 @@ def index():
         
         
         # flash("Tải tập tin {} thành công".format(file.filename))
-        if language_in == language_out:
-            os.system('python3 wav.py -i {} -s {}'.format(PATH+file.filename,language_in))
-        else:
-            os.system('python3 wav.py -i {} -s {} -d {}'.format(PATH+file.filename,language_in,language_out))
+
             
         file_output = file.filename[:file.filename.index('.mp4')] + '_output.mp4'
         shutil.move(PATH+file_output, source)
